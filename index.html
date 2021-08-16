@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer using Callback Hell</title>
+    <style>
+        .container{
+            background-image: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+            height: 750px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            background-color: rgb(38, 24, 233);
+            color:white;
+            font-weight: bold;
+        }
+        .display{
+            background-color: white;
+            width: 250px;
+            height: 150px;
+            font-weight:bolder;
+            font-size: xx-large;
+            color:red;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <script>
+        
+        const container = document.createElement('div');
+        container.setAttribute("class","container");
+        document.body.append(container);
+
+        const btndiv = document.createElement('div');
+        btndiv.setAttribute("class","btndiv");
+        
+        const display = document.createElement('div');
+        display.setAttribute("class","display");
+        container.append(btndiv,display);
+
+
+        let btn = document.createElement('button');
+        btn.setAttribute("class","btn");
+        btn.setAttribute("onclick","startTimer()")
+        btn.innerText= `Start Timer`;
+        btndiv.append(btn);
+
+        function startTimer(){
+            setTimeout(()=>{
+            
+            display.innerText= "10";
+             setTimeout(()=>{
+             
+             display.innerText= "9";
+                setTimeout(()=>{
+                
+                display.innerText= "8";
+                    setTimeout(()=>{
+                    
+                    display.innerText= "7";
+                        setTimeout(()=>{
+                         
+                         display.innerText= "6";
+                            setTimeout(()=>{
+                            
+                            display.innerText= "5";
+                                setTimeout(()=>{
+                                
+                                display.innerText= "4";
+                                    setTimeout(()=>{
+                                    
+                                    display.innerText= "3";
+                                        setTimeout(()=>{
+                                        
+                                        display.innerText= "2";
+                                            setTimeout(()=>{
+                                            
+                                            display.innerText= "1";
+                                                setTimeout(()=>{
+                                                
+                                                display.innerText= "Happy Independence Day";
+                                                },1000)
+                                            },1000)
+                                        },1000)
+                                   },1000)
+                               },1000)
+                         },1000)
+                    },1000)
+                 },1000)
+               },1000)
+          },1000)
+        },1000)
+
+        }
+        
+    </script>
+    
+</body>
+</html>
